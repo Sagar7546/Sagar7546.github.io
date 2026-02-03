@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sagar Kumar | Cybersecurity Portfolio</title>
+
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <!-- EmailJS -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+  <!-- Particles -->
+  <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+</head>
+
+<body>
+
+<div id="tsparticles"></div>
+
+<!-- HERO SECTION -->
+<section class="hero">
+  <div class="hero-content glass">
+    <h1>Hi, I'm <span>Sagar Kumar</span></h1>
+    <h2>Cybersecurity Engineer & Network Specialist</h2>
+    <p>Protecting systems, securing networks, and building resilient IT infrastructures.</p>
+    <a href="#contact" class="btn">Contact Me</a>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="glass">
+  <h2>About Me</h2>
+  <p>
+    I am a cybersecurity-focused IT professional with strong expertise in networking,
+    system administration, and ethical hacking. I currently work as a Resident Engineer,
+    managing enterprise systems, firewalls, and delivering high-quality technical support.
+  </p>
+</section>
+
+<!-- SKILLS -->
+<section class="glass">
+  <h2>Core Skills</h2>
+  <div class="skills">
+    <span>Network Security</span><span>Firewall Management</span>
+    <span>Windows Server</span><span>Ethical Hacking</span>
+    <span>Python</span><span>SQL</span><span>OWASP</span>
+    <span>IAM</span><span>CCNA</span>
+  </div>
+</section>
+
+<!-- PROGRESS BARS -->
+<section class="glass">
+  <h2>Technical Proficiency</h2>
+  <div class="progress-container">
+    <div class="progress-box">
+      <label>Networking & CCNA</label>
+      <div class="progress-bar"><div class="progress" data-width="90%"></div></div>
+    </div>
+    <div class="progress-box">
+      <label>Cyber Security & OWASP</label>
+      <div class="progress-bar"><div class="progress" data-width="85%"></div></div>
+    </div>
+    <div class="progress-box">
+      <label>Windows Server & Firewalls</label>
+      <div class="progress-bar"><div class="progress" data-width="88%"></div></div>
+    </div>
+    <div class="progress-box">
+      <label>Python & SQL</label>
+      <div class="progress-bar"><div class="progress" data-width="75%"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="glass">
+  <h2>Professional Experience</h2>
+  <div class="timeline">
+    <div class="timeline-item">
+      <h3>Resident Engineer — Buddy’s Infotech</h3>
+      <span>2021 – Present | New Delhi</span>
+      <p>Managing enterprise IT systems, troubleshooting networks, configuring firewalls, and ensuring secure infrastructure operations.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="glass">
+  <h2>Contact Me</h2>
+  <form id="contact-form">
+    <input type="text" name="user_name" placeholder="Your Name" required>
+    <input type="email" name="user_email" placeholder="Your Email" required>
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+    <p id="form-status"></p>
+  </form>
+</section>
+
+<footer class="glass footer">
+  <p>© 2026 Sagar Kumar | Cybersecurity Portfolio</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
