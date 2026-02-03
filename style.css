@@ -1,10 +1,6 @@
 * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
 
-body {
-  background:#0a0f1c;
-  color:white;
-  scroll-behavior:smooth;
-}
+body { background:#0a0f1c; color:white; scroll-behavior:smooth; }
 
 #tsparticles {
   position:fixed;
@@ -16,7 +12,6 @@ body {
 /* NAVBAR */
 .navbar {
   position:fixed;
-  top:0;
   width:100%;
   display:flex;
   justify-content:space-between;
@@ -27,7 +22,8 @@ body {
 }
 
 .navbar ul { display:flex; gap:20px; list-style:none; }
-.navbar a { color:white; text-decoration:none; font-size:14px; }
+.navbar a { color:white; text-decoration:none; transition:0.3s; }
+.navbar a:hover { color:#00ffff; }
 
 /* HERO */
 .hero {
@@ -36,11 +32,10 @@ body {
   justify-content:center;
   align-items:center;
   text-align:center;
-  padding:0 20px;
 }
 
-.hero h1 { font-size:2.8rem; color:#00ffff; }
-.hero p { margin:15px 0; opacity:0.85; }
+.hero h1 span { color:#00ffff; }
+.hero h2 { margin:15px 0; font-weight:400; }
 
 .btn {
   background:linear-gradient(90deg,#00ffff,#007cf0);
@@ -49,7 +44,9 @@ body {
   color:black;
   text-decoration:none;
   font-weight:bold;
+  transition:0.3s;
 }
+.btn:hover { transform:scale(1.05); }
 
 /* SECTIONS */
 .section { padding:100px 10%; }
@@ -57,6 +54,7 @@ body {
 
 .container { max-width:1000px; margin:auto; }
 
+/* SKILLS */
 .skills-grid {
   display:grid;
   grid-template-columns:repeat(auto-fit,minmax(150px,1fr));
@@ -70,44 +68,33 @@ body {
   border-radius:12px;
   text-align:center;
   border:1px solid rgba(0,255,255,0.2);
+  transition:0.3s;
 }
+.skill-card:hover { transform:translateY(-5px); }
 
+/* EXPERIENCE */
 .exp-card {
   background:rgba(255,255,255,0.05);
   padding:20px;
   border-radius:12px;
   border-left:3px solid #00ffff;
-  margin-top:20px;
 }
 
-form {
-  display:flex;
-  flex-direction:column;
-  gap:15px;
-  margin-top:20px;
-}
-
+/* CONTACT */
+form { display:flex; flex-direction:column; gap:15px; margin-top:20px; }
 input, textarea {
-  padding:12px;
-  border-radius:8px;
-  border:none;
-  background:rgba(255,255,255,0.08);
-  color:white;
+  padding:12px; border-radius:8px; border:none;
+  background:rgba(255,255,255,0.08); color:white;
 }
-
 button {
   background:linear-gradient(90deg,#00ffff,#007cf0);
-  border:none;
-  padding:12px;
-  border-radius:25px;
-  font-weight:bold;
-  cursor:pointer;
+  border:none; padding:12px; border-radius:25px;
+  font-weight:bold; cursor:pointer;
 }
 
-footer {
-  text-align:center;
-  padding:30px;
-  background:#0f172a;
-  font-size:14px;
-  opacity:0.7;
-}
+/* FOOTER */
+footer { text-align:center; padding:30px; background:#0f172a; opacity:0.7; }
+
+/* SCROLL ANIMATION */
+.hidden { opacity:0; transform:translateY(40px); transition:all 0.8s ease; }
+.show { opacity:1; transform:translateY(0); }
