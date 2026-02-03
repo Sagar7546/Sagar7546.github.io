@@ -8,50 +8,38 @@
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <!-- EmailJS -->
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
-
-  <!-- Particles -->
   <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
 </head>
 
 <body>
-
 <div id="tsparticles"></div>
 
-<!-- NAVBAR -->
 <nav class="navbar">
   <div class="logo">Sagar Kumar</div>
   <ul>
     <li><a href="#about" class="nav-link">About</a></li>
     <li><a href="#skills" class="nav-link">Skills</a></li>
     <li><a href="#experience" class="nav-link">Experience</a></li>
-    <li><a href="#contact" class="nav-link">Contact</a></li>
+    <li><button id="openContact" class="contact-btn">Contact</button></li>
   </ul>
 </nav>
 
-<!-- HERO -->
 <section class="hero">
   <div class="hero-content">
     <h1>Hi, I'm <span>Sagar Kumar</span></h1>
     <h2><span id="typing"></span></h2>
-    <a href="#contact" class="btn nav-link">Hire Me</a>
+    <button id="openContactHero" class="btn">Hire Me</button>
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about" class="section hidden">
   <div class="container">
     <h2>About Me</h2>
-    <p>
-      Cybersecurity-focused IT professional experienced in network security,
-      firewall management, Windows Server administration, and ethical hacking.
-      I secure enterprise systems and build resilient digital infrastructure.
-    </p>
+    <p>Cybersecurity-focused IT professional securing enterprise systems and networks.</p>
   </div>
 </section>
 
-<!-- SKILLS -->
 <section id="skills" class="section dark hidden">
   <div class="container">
     <h2>Technical Skills</h2>
@@ -68,38 +56,40 @@
   </div>
 </section>
 
-<!-- EXPERIENCE -->
 <section id="experience" class="section hidden">
   <div class="container">
     <h2>Experience</h2>
     <div class="exp-card">
       <h3>Resident Engineer — Buddy’s Infotech</h3>
       <span>2021 – Present | New Delhi</span>
-      <p>
-        Managing enterprise networks, configuring firewalls, maintaining Windows servers,
-        and ensuring secure IT infrastructure for clients.
-      </p>
+      <p>Managing enterprise IT systems and security infrastructure.</p>
     </div>
   </div>
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="section dark hidden">
-  <div class="container">
-    <h2>Contact Me</h2>
-    <form id="contact-form">
-      <input type="text" name="user_name" placeholder="Your Name" required>
-      <input type="email" name="user_email" placeholder="Your Email" required>
-      <textarea name="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-      <p id="form-status"></p>
-    </form>
-  </div>
-</section>
+<footer>© 2026 Sagar Kumar | Cybersecurity Portfolio</footer>
 
-<footer>
-  © 2026 Sagar Kumar | Cybersecurity Portfolio
-</footer>
+<!-- CONTACT MODAL -->
+<div id="contactModal" class="modal">
+  <div class="modal-content">
+    <span class="close">&times;</span>
+
+    <div id="formContainer">
+      <h2>Contact Me</h2>
+      <form id="contact-form">
+        <input type="text" name="user_name" placeholder="Your Name" required>
+        <input type="email" name="user_email" placeholder="Your Email" required>
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+
+    <div id="successMessage" class="success hidden">
+      <div class="checkmark"></div>
+      <h3>Message Sent Successfully!</h3>
+    </div>
+  </div>
+</div>
 
 <script src="script.js"></script>
 </body>
