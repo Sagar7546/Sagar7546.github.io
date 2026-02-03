@@ -59,11 +59,11 @@ tsParticles.load("tsparticles", {
 });
 
 // ===== EmailJS =====
-emailjs.init("YOUR_PUBLIC_KEY");
+emailjs.init("kzZPoxfKpA96FFOxP");
 
 document.getElementById("contact-form").addEventListener("submit", function(e) {
   e.preventDefault();
-  emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this)
+  emailjs.sendForm("service_1b5181c", "template_ot97div", this)
     .then(() => {
       document.getElementById("form-status").innerText = "Message sent successfully!";
       this.reset();
@@ -71,3 +71,4 @@ document.getElementById("contact-form").addEventListener("submit", function(e) {
       document.getElementById("form-status").innerText = "Failed to send message.";
     });
 });
+
