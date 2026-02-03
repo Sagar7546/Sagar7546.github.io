@@ -98,3 +98,54 @@ footer { text-align:center; padding:30px; background:#0f172a; opacity:0.7; }
 /* SCROLL ANIMATION */
 .hidden { opacity:0; transform:translateY(40px); transition:all 0.8s ease; }
 .show { opacity:1; transform:translateY(0); }
+/* KEEP ALL YOUR EXISTING CSS ABOVE */
+
+/* CONTACT BUTTON */
+.contact-btn{background:none;border:none;color:white;cursor:pointer;font-size:14px}
+.contact-btn:hover{color:#00ffff}
+
+/* MODAL */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0; /* shorthand for top/left/right/bottom 0 */
+  background: rgba(0,0,0,0.75);
+  z-index: 99999;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background: #0f172a;
+  padding: 30px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 420px;
+  position: relative;
+  box-shadow: 0 0 25px rgba(0,255,255,0.2);
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+/* IMPORTANT FIXES */
+#tsparticles, #tsparticles canvas {
+  pointer-events: none !important;
+  z-index: -1 !important;
+}
+
+/* Make sure modal is above everything */
+.modal {
+  z-index: 9999 !important;
+}
+
